@@ -5,18 +5,17 @@
 
 Gem::Specification.new do |s|
   s.name = "tmuxinator"
-  s.version = "0.5.0"
+  s.version = "0.5.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Allen Bargi"]
-  s.date = "2011-10-10"
+  s.date = "2011-11-04"
   s.description = "Create and manage complex tmux sessions easily."
   s.email = "allen.bargi@gmail.com"
   s.executables = ["mux", "tmuxinator", "tmuxinator_completion"]
   s.extra_rdoc_files = [
     "LICENSE.txt",
-    "README.md",
-    "TODO"
+    "README.md"
   ]
   s.files = [
     ".document",
@@ -52,18 +51,18 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_development_dependency(%q<rspec>, ["~> 2.6.0"])
-      s.add_development_dependency(%q<bundler>, ["~> 1.0.18"])
+      s.add_development_dependency(%q<bundler>, ["~> 1.1.rc"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.6.4"])
       s.add_development_dependency(%q<rcov>, ["~> 0.9.10"])
     else
       s.add_dependency(%q<rspec>, ["~> 2.6.0"])
-      s.add_dependency(%q<bundler>, ["~> 1.0.18"])
+      s.add_dependency(%q<bundler>, ["~> 1.1.rc"])
       s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
       s.add_dependency(%q<rcov>, ["~> 0.9.10"])
     end
   else
     s.add_dependency(%q<rspec>, ["~> 2.6.0"])
-    s.add_dependency(%q<bundler>, ["~> 1.0.18"])
+    s.add_dependency(%q<bundler>, ["~> 1.1.rc"])
     s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
     s.add_dependency(%q<rcov>, ["~> 0.9.10"])
   end
