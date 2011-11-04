@@ -159,6 +159,7 @@ module Tmuxinator
         Dir.mkdir("#{ENV["HOME"]}/.tmuxinator/") unless File.directory?(File.expand_path("~/.tmuxinator"))
         sub_dir = File.join(File.expand_path(Dir.pwd), '.tmuxinator/')
         if File.directory?(sub_dir)
+          $stdout.puts sub_dir
           return sub_dir
         else
           return "#{ENV["HOME"]}/.tmuxinator/"
