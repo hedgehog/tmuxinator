@@ -155,11 +155,13 @@ module Tmuxinator
       private #==============================
 
       def root_dir
+        $stdout.puts "sub_dir is..."
         # create ~/.tmuxinator directory if it doesn't exist
         Dir.mkdir("#{ENV["HOME"]}/.tmuxinator/") unless File.directory?(File.expand_path("~/.tmuxinator"))
         sub_dir = File.join(File.expand_path(Dir.pwd), '.tmuxinator/')
+        $stdout.puts sub_dir
         if File.directory?(sub_dir)
-          $stdout.puts sub_dir
+          $stdout.puts "... and we found it."
           return sub_dir
         else
           return "#{ENV["HOME"]}/.tmuxinator/"
