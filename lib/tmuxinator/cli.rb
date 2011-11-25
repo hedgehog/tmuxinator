@@ -141,10 +141,9 @@ module Tmuxinator
         project_name = args.shift
         config_path = "#{root_dir}#{project_name}.yml"
         config = Tmuxinator::ConfigWriter.new(config_path).render
-        # writeout the tmux confi to ttmux.conf (ttmux is not a typo))
-        File.new(File.join(root_dir, 'ttmux.conf'), 'w') do |io|
-          io.write(config)
-        end
+        # writeout the tmux script to ttmux.sh (ttmux is not a typo)
+        tmux_script = File.join(root_dir, 'ttmux.sh')
+        File.open(tmux_script, 'w') { |io| io.write(config) }
         # replace current proccess by running compiled tmux config
         exec(config)
       end
