@@ -67,4 +67,4 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<rcov>, ["~> 0.9.10"])
   end
 end
-
+#sgft
